@@ -9,6 +9,7 @@ import static java.util.Map.of;
 import javax.validation.Valid;
 import static com.example.server.server.model.Status.SERVER_UP;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +26,7 @@ import com.example.server.server.service.ServerService;
 import static java.time.LocalDateTime.now;
 
 import lombok.RequiredArgsConstructor;
-
+@CrossOrigin(value = "*")
 @RestController
 @RequestMapping("/server")
 @RequiredArgsConstructor
